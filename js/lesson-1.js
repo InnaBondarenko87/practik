@@ -7,25 +7,20 @@
 // Підказка: prompt завжди повертає рядок (String), тому перед перевіркою
 // перетворіть значення на число за допомогою Number().
 
+// ****   I   *****
+
 // const input = prompt("Введіть число:");
 // const number = Number(input);
 // if (number === 10) {
 //   alert("Вірно");
 // } else alert("Невірно");
 
-// const min = 78;
+// ****    II   *****
+// const input = prompt("Введіть число:");
+// const number = Number(input);
+// number === 10 ? alert("Вірно") : alert("Невірно");
 
-// if (min > 45 && min <= 60) {
-//   alert(`${min}входить в 4 чверть`);
-// } else if (min > 30 && min <= 44) {
-//   alert(`${min}входить в 3 чверть`);
-// } else if (min > 15 && min <= 29) {
-//   alert(`${min}входить в 2 чверть`);
-// } else if (min > 0 && min <= 14) {
-//   alert(`${min}входить в 2 чверть`);
-// } else {
-//   alert("Ви ввели невірне число");
-// }
+// ***********************
 
 // У змінній min лежить випадкове число від 0 до 59.
 // Визначте, в яку чверть години потрапляє
@@ -34,15 +29,20 @@
 // "10 входить в першу чверть"
 
 // const min = Math.floor(Math.random() * (59 - 0) + 0);
-// min = 3;
+// const min = 78;
 // if (min > 0 && min <= 15) {
-//   alert(`${min} I чверть"`);
+//   alert(`${min} - "I чверть"`);
 // } else if (min > 15 && min <= 30) {
-//   alert(`${min} II чверть"`);
+//   alert(`${min} - "II чверть"`);
 // } else if (min > 30 && min <= 45) {
-//   `${min} III чверть"`;
+//   alert(`${min} - "III чверть"`);
+// } else if (min > 46 && min <= 60) {
+//   alert(`${min} - "IV чверть"`);
+// } else {
+//   alert("Ви ввели невірне число");
 // }
 
+// ****************
 // Змінна num може набувати 4 значення: '1', '2', '3' або '4'
 // (запитуй це значення у користувача через prompt).
 // Якщо вона має значення '1', то у змінну result запишіть 'зима',
@@ -96,26 +96,42 @@
 //   }
 // }
 
+// ************************
 // Отримуйте від користувача число (кількість хвилин) через prompt
 // і виводьте у консоль рядок у форматі годин та хвилин.
 // Приклад: користувач вводить в prompt '70' -> в консолі відобразиться '01:10'.
 // Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'):
 // <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples>
 
-//   function leftFillNum(num, targetLength){
-//    num = prompt("ВВЕДІТЬ КІЛЬКІСТЬ ХВИЛИН:");
+// const userAnswer = Number(prompt("ВВЕДІТЬ КІЛЬКІСТЬ ХВИЛИН:"));
 
-// // const num ;
-// // console.log(leftFillNum(num, 5)); // "00123"
+// console.log(formatMessage(userAnswer));
 
-//     if (num <= 60) {
-//       return num.toString().padStart(targetLength, "0");
-//     } else {
-
-//     }
+// function formatMessage(totalMinuts) {
+//   const hours = Math.floor(totalMinuts / 60);
+//   const modifieHours = String(hours).padStart(2, "0");
+//   const minutes = totalMinuts % 60;
+//   const modifieMinutes = String(minutes).padStart(2, 0);
+//   return `${modifieHours}:${modifieMinutes}`;
 // }
 
-// zadacz 5;
+// *********** Viktor
+
+// const promt = prompt("write minute");
+
+// const foo = (promt) => {
+//   const hour = Math.floor(promt / 60);
+//   const minute = promt % 60;
+//   const rezalt = `${String(hour).padStart(2, "0")}:${String(minute).padStart(
+//     2,
+//     "0"
+//   )}`;
+//   return rezalt;
+// };
+// console.log(foo(promt));
+
+// *********   zadacz 5  *******
+
 // Напишіть код, який запитуватиме у користувача
 // логін за допомогою prompt і виводить результат в консоль браузера
 
@@ -149,7 +165,8 @@
 
 // fuu();
 
-// zadacza 6;
+//*************   zadacza 6  ***********
+
 // Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
 // const whileNumber = (d) => {
 //   let n = 1;
@@ -160,7 +177,8 @@
 // };
 // whileNumber(20);
 
-// zadacz 7;
+// ***********    zadacz 7   **********
+
 // Напишіть функцію getNumbers(min, max), що приймає 2 параметри -
 // мінімальне і максимальне число відповідно.
 // Напишіть цикл всередині функції, який виводить у консоль
@@ -182,12 +200,39 @@
 // }
 // getNumbers();
 
+// ************
+// Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
+// Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
+// повертати з функції рядок - 'Not a number!'.
+
+// ****  GPT  ****
+// function min(a, b) {
+//   if (typeof a !== "number" || typeof b !== "number") {
+//     return "Not a number!";
+//   }
+
+//   return a < b ? a : b;
+// }
+
+// ***************
+// ??????
+
 // Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
 // якщо параметр age більше чи дорівнює 18.
 // В іншому випадку вона запитує підтвердження через confirm
 // і повертає його результат (true/false).
 
-// zadacza 10
+// function isAdult(age) {
+//   if (age >= 18) {
+//     return true;
+//   } else {
+//     confirm("ВИ ДОСЯГЛИ 18 РОКІВ?");
+//   }
+// }
+// isAdult();
+
+// **********    zadacza 10   *************
+
 // Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
 // Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
 // якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
