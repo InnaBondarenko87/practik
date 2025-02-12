@@ -1,3 +1,4 @@
+// *******  1   *******
 // Створіть масив styles з елементами 'jazz' і 'blues'
 // Додайте до кінця масиву елемент 'rock-n-roll' за допомогою відповідного методу масивів
 // Знайдіть елемент 'blues' у масиві та замініть його на 'classic', використовуючи код
@@ -24,7 +25,7 @@
 
 // logItems(rock);
 
-// ************** 2*************
+// ************** 2 *************
 
 // Напишіть функцію checkLogin(array), яка:
 // Приймає масив логінів як аргумент.
@@ -48,30 +49,33 @@
 // }
 
 // checkLogin(logins);
+// *************************
 
+// ******   3   ***********
 // Напишіть функцію caclculateAverage(),
 // яка приймає довільну кількість
 // аргументів і повертає їхнє середнє значення.
-// Додайте перевірку, що аргументи - це числа.????????????????????????????
+// Додайте перевірку, що аргументи - це числа.
 
-function caclculateAverage() {
-  const args = Array.from(arguments);
-  //
-  //   console.log(args);
-  let sum = 0;
+// function caclculateAverage() {
+//   const args = Array.from(arguments);
+//   //
+//   //   console.log(args);
+//   let sum = 0;
 
-  for (let i = 0; i < args.length; i++) {
-    // console.log(args[i] !== typeof Number);
-    if (args[i] !== typeof "number" && !isNaN(args[i]))
-      // console.log(typeof args[i]);
-      sum += args[i];
-  }
-  return sum / args.length;
-}
+//   for (let i = 0; i < args.length; i++) {
+//     // console.log(args[i] !== typeof Number);
+//     if (args[i] !== typeof "number" && !isNaN(args[i]))
+//       // console.log(typeof args[i]);
+//       sum += args[i];
+//   }
+//   return sum / args.length;
+// }
 
-console.log(caclculateAverage(1, 2, "sfsd", "dsfdsfg"));
-console.log(caclculateAverage(1, 20, 30, 54));
+// console.log(caclculateAverage(1, 2, "sfsd", "dsfdsfg"));
+// console.log(caclculateAverage(1, 20, 30, 54));
 
+// без перевірки!!!
 // functifunction caclculateAverage() {
 //   const args = Array.from(arguments);
 //   //   console.log(args);
@@ -85,8 +89,207 @@ console.log(caclculateAverage(1, 20, 30, 54));
 
 // console.log(caclculateAverage(1, 2, 3));
 // console.log(caclculateAverage(1, 20, 30, 54));
+// ***********************************************
 
-// **************
+// ********    4   ******
+// Напишіть функцію, яка сумуватиме сусідні числа
+// і пушитиме їх в новий масив.
+
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+// уточнення: складати необхідно перше число з другим, потім друге - з третім,
+// третє - з четвертим і так до кінця.
+// В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
+
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+// function totalSum(a) {
+//   const arrSum = [];
+//   for (i = 0; i < a.length - 1; i++) {
+//     const b = a[i] + a[i + 1];
+//     arrSum.push(b);
+//   }
+//   return arrSum;
+// }
+
+// console.log(totalSum(someArr));
+// *********************************
+
+// **************   5    *************
+
+// Напишіть функцію findSmallestNumber(numbers),
+// яка шукає найменше число в масиві.
+// Додайте перевірку, що функція отримує саме масив, і
+// якщо функція отримує масив - поверніть з функції найменше число,
+// в іншому випадку - поверніть 'Sory, it is not an array!'.
+
+// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+// function findSmallestNumber(numbers) {
+//   let min;
+//   //   console.log(numbers);
+//   for (
+//     let i = 0;
+//     i < numbers.length;
+//     i++ // console.log(numbers[i]);
+//   ) {
+//     if (numbers[i] < numbers[i + 1]) {
+//       min = numbers[i];
+//     } else {
+//       min = numbers[i + 1];
+//     }
+//   }
+//   //   return min;
+// }
+// findSmallestNumber(numbers);
+
+// function findSmallestNumber(numbers) {
+//   let min;
+//   for (let i = 0; i < numbers.length; i++) {
+//     // console.log(numbers[i] < numbers[i + 1]);
+//     if (numbers[i] < numbers[i + 1]) {
+//       min = numbers[i];
+//     } else {
+//       min = numbers[i + 1];
+//       console.log(numbers[i]);
+//     }
+//   }
+//   return min;
+// }
+// findSmallestNumber(numbers);
+
+// Lesson
+// const values = [-24, 17, 94, 1, -23, 37];
+
+// function findSmallestNumber(numbers) {
+//   //   console.log(typeof numbers);
+//   let min;
+//   if (!Array.isArray(numbers)) alert("Sory, it is not an array!");
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (i === 0) {
+//       min = numbers[i];
+//     } else if (numbers[i] < min) {
+//       min = numbers[i];
+//     }
+//   }
+//   return min;
+// }
+
+// console.log(findSmallestNumber(values));
+// *********************************************
+
+// ********   6    ******
+// Напишіть функцію findLongestWord(string), яка
+// приймає довільний рядок, що складається лише зі слів, розділених
+// пробілами (параметр string), і повертатиме найдовше слово у реченні.
+
+// Скористайтесь цим прикладом виклику функції для перевірки її роботи:
+// console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+
+function findLongestWord() {
+  const args = Array.from(arguments).join(" ");
+  console.log(args);
+
+  for (let i = 0; i < args.length; i++) {}
+}
+
+findLongestWord(1, 2, 3);
+findLongestWord(10, 20, 30, 40);
+// console.log(findLongestWord("London is the capital of Great Britain"));
+// **************************************************************************
+
+// **** 7 ****
+// Напишіть скрипт, який для об'єкту user, послідовно:
+// 1 - додасть поле mood зі значенням 'happy',
+// 2 - замінить hobby на 'skydiving',
+// 3 - замінить значення premium на false,
+// 4 - виведе зміст об'єкта user у форматі
+// '<ключ>:<значення>' використовуя Object.keys() та for...of
+
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tenis",
+//   premium: true,
+// };
+
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// const keys = Object.keys(user);
+
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+
+// ***II***
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tenis",
+//   premium: true,
+// };
+
+// function foo(obj) {
+//   obj.mood = "happy";
+//   obj.hobby = "skydiving";
+//   obj.premium = false;
+
+//   const keys = Object.keys(obj);
+
+//   for (const key of keys) {
+//     console.log(`${key}: ${obj[key]}`);
+//   }
+// }
+// foo(user);
+// ***************
+
+// ***   8   ***
+// Є об'єкт, в якому зберігаються зарплати команди
+// Напишіть код для додавання усіх зарплат та
+// збережіть його результат в змінній sum.
+// Якщо об'єкт salaries пустий, то результат має бути 0
+
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+
+// let total = 0;
+
+// const values = Object.values(salaries);
+
+// for (const value of values) {
+//   total += value;
+// }
+// console.log(total);
+
+// **** II ****
+
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+
+// function foo(summa) {
+//   let total = 0;
+
+//   const values = Object.values(summa);
+
+//   for (const value of values) {
+//     total += value;
+//   }
+//     console.log(total);
+// //   return total;
+// }
+
+// foo(salaries);
+// **************************
+
+// *******  9  *******
 // Створіть об'єкт calculator з наступними методами:
 // read(a, b) - приймає два аргумента і зберігає їх як властивості об'єкта,
 // sum() - повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті),
@@ -96,7 +299,9 @@ console.log(caclculateAverage(1, 20, 30, 54));
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
 
-// *************
+// ******************
+
+// *******  10  ******
 // Напишіть функцію calcTotalPrice(fruits, fruitName),
 // яка приймає массив об'єктів (fruits) і рядок з назвою фрукта (fruitName).
 // Функція рахує і повертає загальну вартість фрукта
