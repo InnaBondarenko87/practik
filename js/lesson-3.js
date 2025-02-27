@@ -161,10 +161,71 @@
 // - методи add, substruct, divide, multiply
 // Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
 
+// class Calc {
+//     constructor()
+//  number() {
+//         const num = 0,
+//  }
+//     getResult() {
+
+//     };
+//     add() {
+//         num + fggh;
+//     };
+
+//     substruct() {
+
+//     }
+//     divide() {
+
+//     }
+//     multiply() {
+
+//     }
+
+// }
+
 // Завдання 12:
 // Напиши клас Client який створює об'єкт з властивостями login email.
 // Оголоси приватні властивості #login #email, доступ до яких зроби
 // через геттер та сеттер login email
+
+// class Client {
+//   #login;
+//   #email;
+//   constructor(login, email) {
+//     this.#email = email;
+//     this.#login = login;
+//   }
+
+//   getLogin() {
+//     return this.#login;
+//   }
+//   setLogin(newLogin) {
+//     this.#login = newLogin;
+//   }
+//   getEmail() {
+//     return this.#email;
+//   }
+//   setEmail(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// const inna = new Client("Inna", "inna@gmail.com");
+
+// console.log(inna);
+
+// console.log(inna.getEmail());
+// console.log(inna.getLogin());
+
+// // inna.setLogin("Inna SUPER!!!");
+// // console.log(inna.setLogin());
+
+// inna.setEmail("super_inna@gmail.com");
+// console.log(inna.getEmail());
+
+// **********************************
 
 // Завдання 13:
 //  Наслідування у класах!
