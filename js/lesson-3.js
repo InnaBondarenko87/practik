@@ -163,29 +163,27 @@
 // Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
 
 // class Calc {
+//   constructor() {
+//     this.number = 0;
+//   }
 
-//  number(value) {
-//        this.num = value.num
-//  }
-//     getResult() {
-// return this.resalt
-//     };
-//     add(value) {
-//         this.num +
-//     };
+//   getResult() {
+//     return this.number;
+//   }
 
-//     substruct() {
-
-//     }
-//     divide() {
-
-//     }
-//     multiply() {
-
-//     }
+//   add(value) {
+//     this.number += value;
+//     console.log(this);
+//     return this;
+//   }
 // }
 
-// const result = new Calc;
+// const result = new Calc();
+
+// console.log("this", result.add(5));
+
+// console.log(result.substruct(6));
+// console.log();
 
 // Завдання 12:
 // Напиши клас Client який створює об'єкт з властивостями login email.
@@ -229,7 +227,7 @@
 
 // **********************************
 
-// Завдання 13:
+// Завдання 13:?????????????????
 //  Наслідування у класах!
 // Cтворіть клас `Person`, який містить наступні властивості:
 //  - `name` - ім'я людини;
