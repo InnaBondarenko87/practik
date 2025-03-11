@@ -89,4 +89,103 @@
 //   </li>`
 // ); //19
 
+// const ulEl = document.querySelector(".list");
+// ulEl.innerHTML = ""; //20
+
 // ******************  2  ***************************
+
+// const div = document.querySelector(".number");
+
+// console.log(div);
+
+// ----------------------------------------------------
+// *************  3  *******************
+
+// ===================================
+// ---------------------------------------------
+// const inputEl = document.querySelector(".contact-form-input");
+// inputEl.addEventListener("input", onInputElInput);
+
+// function onInputElInput(e) {
+//   const a = e.target.value;
+//   if (a.length >= 6) {
+//     inputEl.classList.add("success");
+//     inputEl.classList.remove("error");
+//   } else {
+//     inputEl.classList.remove("success");
+//     inputEl.classList.add("error");
+//   }
+// }
+// //1
+// =========================
+// ----------------------
+//     не працює focus!!! zd 2
+//--------------------------
+
+// const inputEl = document.querySelector(".contact-form-input");
+// inputEl.addEventListener("focus", onInputElFocus);
+
+// function onInputElFocus(e) {
+//   const text = e.target.value;
+
+//   if (text.length !== 0) {
+//     inputEl.style.outline = "3px solid green";
+//   } else {
+//     inputEl.style.outline = "3px solid red";
+//   }
+// }
+
+// ----------------------
+//      zd 3
+//--------------------------
+
+// const inputEl = document.querySelector(".contact-form-input");
+// inputEl.addEventListener("blur", onInputElBlur);
+
+// function onInputElBlur(e) {
+//   const text = e.target.value;
+
+//   if (text.length !== 0) {
+//     inputEl.style.outline = "3px solid lime";
+//   } else {
+//     inputEl.style.outline = "3px solid red";
+//   }
+// }
+// ____________________________________________________
+//  zd 4
+// __________________________________________________
+
+// const formEvents = document.querySelector(".contact-form");
+// formEvents.addEventListener("submit", onFormSubmit);
+// const inputEl1 = document.querySelector(".contact-form-input");
+// inputEl1.addEventListener("input", onInput1Input);
+
+// const spanEl = document.querySelector(".js-username-output");
+
+// function onFormSubmit(event) {
+//   event.preventDefault();
+
+//   const elements = event.target.elements;
+//   if (elements.userName.value.length !== 0 && elements.accept.checked) {
+//     console.log(elements.userName.value);
+//   } else {
+//     console.log("не всі поля заповнили!");
+//   }
+
+//   formEvents.reset();
+//   spanEl.textContent = "Anonymous";
+// }
+
+// function onInput1Input(event) {
+//   spanEl.textContent = event.target.value;
+// }
+
+// =================================================
+// через checkbox????
+// -------------------------------------------
+// const inputEl = document.querySelector(".contact-form-checkbox");
+// inputEl.addEventListener("change", onInputChange);
+// function onInputChange(event) {
+//   spanEl.textContent = event.target.accept;
+//   //   console.log("jk", event);
+// }

@@ -111,3 +111,11 @@ ul {
 .panel.active {
   display: block;
 }
+
+.success {
+  background-color: aqua;
+}
+
+.error {
+  background-color: blueviolet;
+}
