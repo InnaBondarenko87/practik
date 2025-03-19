@@ -256,3 +256,23 @@
 //   spanEl.textContent = event.target.accept;
 //   //   console.log("jk", event);
 // }
+// ________________________________________________________________
+// ===================================================================
+
+// Використовуй шаблон розмітки з файлу html та напиши наступний функціонал:
+// при кліку на елемент меню, розкривай блок з текстом. При повторному кліку
+// по елементу, розкритий текст приховується. Нажимаючи на інші
+// елементи меню, попередньо відкриті елементи не закриваються.
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const accordionButtons = document.querySelectorAll(".js-accordion-btn");
+
+//   accordionButtons.forEach((button) => {
+//     button.addEventListener("click", () => {
+//       const panel = button.nextElementSibling; // Знаходимо наступний елемент (панель з текстом)
+
+//       // Перемикаємо клас "active" для відображення чи приховування панелі
+//       panel.classList.toggle("active");
+//     });
+//   });
+// });

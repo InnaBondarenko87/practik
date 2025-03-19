@@ -112,6 +112,14 @@ ul {
   display: block;
 }
 
+.js-panel {
+  display: none; /* Спочатку приховуємо */
+}
+
+.js-panel.active {
+  display: block; /* Показуємо при активному стані */
+}
+
 .success {
   background-color: aqua;
 }
